@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <unistd.h>
 
-static void printClock(char clockIdName[16], clockid_t CLOCK_ID)
+static void printClock(char *clockIdName, clockid_t CLOCK_ID)
 {
     struct timespec curr_tm;
     clock_gettime(CLOCK_ID, &curr_tm);
